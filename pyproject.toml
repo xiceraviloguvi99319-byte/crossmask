@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crossmask"
+version = "0.1.0"
+description = "Local-first privacy toolkit for consistently anonymizing identities across linked Excel and CSV files."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "CrossMask contributors" }]
+keywords = ["privacy", "anonymization", "pseudonymization", "excel", "csv", "pii"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = [
+  "openpyxl>=3.1",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+crossmask = "crossmask.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/xiceraviloguvi99319-byte/crossmask"
+Repository = "https://github.com/xiceraviloguvi99319-byte/crossmask"
+Issues = "https://github.com/xiceraviloguvi99319-byte/crossmask/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

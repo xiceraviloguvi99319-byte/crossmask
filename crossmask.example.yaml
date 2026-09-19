@@ -1,0 +1,27 @@
+version: 1
+secret_env: CROSSMASK_SECRET
+
+rules:
+  - columns: [full_name, fullname, person_name, 姓名, 名字, 联系人]
+    entity: person
+    action: alias
+
+  - columns: [mobile, phone, telephone, tel, 手机号, 手机号码, 电话, 联系方式]
+    entity: phone
+    action: mask
+
+  - columns: [id_card, identity_number, national_id, 身份证, 身份证号, 证件号码]
+    entity: national_id
+    action: alias
+
+  - columns: [bank_card, card_number, account_number, 银行卡, 银行卡号, 银行账号]
+    entity: bank_card
+    action: alias
+
+  - columns: [email, e-mail, 邮箱, 电子邮件]
+    entity: email
+    action: alias
+
+  - columns: [address, home_address, 住址, 地址, 居住地址]
+    entity: address
+    action: alias
